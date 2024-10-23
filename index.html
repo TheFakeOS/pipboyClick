@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+
+  <meta>
+  <meta http-equiv="x-ua-compatible" content="ie=9">
+  </meta>
+  <TITLE>PIPBOY CLOCK</TITLE>
+  <link rel="stylesheet" href="pipboy.css">
+</HEAD>
+
+<BODY>
+  <div class="screen">
+    <div class="screen-reflection"></div>
+    <div class="scan"></div>
+    <nav>
+      <span class="active stat"></span>
+      <span class="dashboard"></span>
+      <span class="termux"></span>
+    </nav>
+    <div class="clock">
+      <span id="h"></span>:<span id="m"></span>
+    </div>
+    <div class="vaultboy">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+      <div class="bar5"></div>
+      <div class="bar6"></div>
+    </div>
+    <div class="supplies"><span>Stimpak (0)</span><span>Radaway (0)</span><span>Stix</span>
+    </div>
+    <div class="info-bar">
+      <span class="weapon"></span>
+      <span class="aim">
+        <p>21</p>
+      </span>
+      <span class="helmet"></span>
+      <span class="shield">
+        <p>130</p>
+      </span>
+      <span class="voltage">
+        <p>126</p>
+      </span>
+      <span class="nuclear">
+        <p>35</p>
+      </span>
+    </div>
+    <div class="hud-bar">
+      <div class="hp"></div>
+      <div class="exp"></div>
+      <div class="ap"></div>
+    </div>
+  </div>
+</BODY>
+<script>
+  function getHoursAndMinutes() {
+    const now = new Date();
+    var hours = now.getHours(); // 获取小时
+    if (hours < 10) {
+      hours = `0${hours}`
+    }
+    var minutes = now.getMinutes(); // 获取分钟
+    if (minutes < 10) {
+      minutes = `0${minutes}`
+    }
+    return { hours, minutes };
+  }
+
+
+  setInterval(() => {
+    const { hours, minutes } = getHoursAndMinutes();
+    document.querySelector("#h").innerHTML = hours
+    document.querySelector("#m").innerHTML = minutes
+  }, 1000)
+</script>
+
+</HTML>
