@@ -123,7 +123,7 @@ nav .off {
 
 .clock {
   color: #8df776;
-  font-size: 90px;
+  font-size: 30vw;
   font-family: 'Digital7';
   font-weight: 600;
 }
@@ -168,48 +168,61 @@ nav .off {
   align-items: center;
 }
 
-
-
 .bar {
   width: 15px;
   height: 3.5px;
   background: #64d515;
 }
 
+.footer {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.full {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right {
+  justify-content: end;
+}
+
 .supplies {
   height: 16px;
-  position: absolute;
-  bottom: 22px;
-  left: 13px;
   background: #000;
+  display: flex;
+  gap: 5px;
 }
 
 .supplies span {
-  margin-right: 5px;
   background: #78e461;
-  padding: 2px 3px 2px 3px;
   color: #000;
+  padding: 0 10px 0 10px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 700;
 }
 
 .hud-bar {
   height: 12px;
-  position: absolute;
-  width: 290px;
-  bottom: 9px;
-  left: 15px;
+  width: 100vw;
   background: #000;
   color: #8df776;
-  z-index: 96;
+  display: flex;
+  justify-content: space-around;
 }
 
 .info-bar {
-  width: 170px;
+  width: auto;
   height: 20px;
-  bottom: 50px;
-  left: 86px;
-  position: absolute;
-  z-index: 97;
 }
 
 .info-bar span {
@@ -244,8 +257,6 @@ nav .off {
 
 .exp {
   display: inline-block;
-  margin-left: 20px;
-
 }
 
 .exp:before {
@@ -255,15 +266,13 @@ nav .off {
 .exp:after {
   content: "";
   display: inline-block;
-  width: 99px;
+  width: 50px;
   height: 4px;
   border: 1px solid lightgreen;
-  margin-left: 2px;
 }
 
 .ap {
   display: inline-block;
-  margin-left: 20px;
 }
 
 .ap:before {
