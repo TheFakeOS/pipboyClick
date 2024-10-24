@@ -112,72 +112,7 @@ nav .off {
   left: -5px;
 }
 
-.main {
-  position: fixed;
-  top: 25px;
-  bottom: 30px;
-  left: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-evenly; */
-  justify-content: space-between;
-  align-items: center;
-}
 
-.clock {
-  color: #8df776;
-  font-size: 25vw;
-  font-family: 'Digital7';
-  font-weight: 600;
-}
-
-.vaultboy {
-  position: relative;
-}
-
-#vaultboy {
-  max-width: 25vw;
-  max-height: 40vh;
-  padding: 20px;
-}
-
-.bars {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-.item {
-  display: flex;
-  flex: 1;
-  height: 50%;
-  flex-direction: column;
-}
-
-.up,
-.down {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20%;
-}
-
-.center {
-  height: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bar {
-  width: 15px;
-  height: 3.5px;
-  background: #64d515;
-}
 
 .footer {
   height: 30px;
