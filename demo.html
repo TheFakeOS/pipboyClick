@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <TITLE>PIPBOY CLOCK</TITLE>
+    <style>
+        @font-face {
+            font-family: 'Digital7';
+            font-style: normal;
+            font-weight: 400;
+            src: url(./Digital7-rg1mL.ttf) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .clock {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #time {
+            font-family: "Digital7";
+            color: #8df776;
+            font-size: 30vw;
+        }
+    </style>
+</HEAD>
+
+<BODY>
+    <div class="clock">
+        <span id="time"></span>
+    </div>
+</BODY>
+<script>
+    function addZero(i) {
+        if (i < 10) { i = "0" + i }
+        return i;
+    }
+
+    function getHoursAndMinutes() {
+        const d = new Date();
+        let h = addZero(d.getHours());
+        let m = addZero(d.getMinutes());
+        let s = addZero(d.getSeconds());
+        let time = h + ":" + m + ":" + s;
+        document.querySelector("#time").innerHTML = time
+        setTimeout(() => {
+            getHoursAndMinutes()
+        }, 1000);
+    }
+    getHoursAndMinutes()
+</script>
+
+</HTML>
